@@ -15,6 +15,7 @@ public class CategoriaService {
 	private CategoriaRepository repo;
 
 	public Categoria find(Integer id) {
+		System.out.println(id+" C");
 		Optional<Categoria> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 					"Objeto não encontrado! Id: "+id+", Tipo: "+Categoria.class.getName()));
@@ -22,6 +23,12 @@ public class CategoriaService {
 	
 	public Categoria insert(Categoria obj) {
 		obj.setId(null);
+		return repo.save(obj);
+	}
+	
+	public Categoria update(Categoria obj) {
+		System.out.println("B "+obj.getId());
+		find(obj.getId());
 		return repo.save(obj);
 	}
 }
