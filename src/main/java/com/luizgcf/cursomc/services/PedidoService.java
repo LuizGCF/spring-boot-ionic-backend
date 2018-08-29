@@ -15,7 +15,6 @@ import com.luizgcf.cursomc.domain.enums.EstadoPagamento;
 import com.luizgcf.cursomc.repositories.ItemPedidoRepository;
 import com.luizgcf.cursomc.repositories.PagamentoRepository;
 import com.luizgcf.cursomc.repositories.PedidoRepository;
-import com.luizgcf.cursomc.repositories.ProdutoRepository;
 import com.luizgcf.cursomc.services.exceptions.ObjectNotFoundException;
 
 @Service
